@@ -1,0 +1,39 @@
+body{
+    background-color: #f4f4f4;
+    
+
+}
+.box{
+    max-width:500px;
+    margin:auto;
+}
+h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+    color:#555;
+}
+.btn-primary{
+    background-color: #007bff;
+    border-color: #004085;
+}
+.btn-primary:hover{
+    background-color: #0056b3;
+    border-color: #004085;
+}
+.text-center a{
+    text-decoration: none;
+    color:#007bff;
+    font-weight: bold;
+}
+.text-center a:hover{
+    text-decoration: underline;
+    color: #0056b3;
+}
+.alert{
+    margin-top: 20px;
+    font-size: 1rem;
+}

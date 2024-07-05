@@ -1,0 +1,24 @@
+Payment Confirmation
+
+Hello {{user}},
+
+Thank You for your advance payment.Your booking has been confirmed.Our team will contact you and make your day remarkable.Here are the details of your transaction:
+
+Booking Details:
+----------------
+Event Name:{{event.event}}
+Event Date:{{booking.booking_for_date}}
+Event Location:{{booking.location}}
+
+Payment Details:
+----------------
+Event Price: ₹{{event.price}}
+GST:₹{{gst}}
+Total Amount:₹{{total_amount}}
+Advance Paid:₹{{amount|floatformat:2}}
+Balance to pay:₹{{balance_amount|floatformat:2}}
+Payment Date:{{booking.booking_date}}
+
+If you have any questions or need further assistance,Please contact our support team.
+
+© 2024 Your Company. All rights reserved.

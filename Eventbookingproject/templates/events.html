@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block title%} Events{%endblock%}
+
+
+{%block content%}
+
+<link rel="stylesheet" href="{%static 'css/events2.css'%}">
+<h1 style="background-color:white;color:grey;text-align:center;">Choose Your Favourite Decor With Us!!</h1>
+
+<div class="container event-container">
+    <div class="row">
+        <div class="col-md-3">
+            <form method="GET" action="{% url 'events' %}" class="search-form">
+                <h2 style="color: grey;font-weight:bold;font-size:25px;">Search Here:</h2>
+                <input type="text" name="search_query" placeholder="Search Events" class="form-control"> <br>
+                       
+           
+            <div class="form-group">
+              <label for="price_filter" style="color:grey;font-weight:bold;font-size:25px;">Price:</label>
+              <select name="price_filter" id="price_filter" class="form-control">
+                <option value="">All</option>                
+                        <option value="lt_20000" {% if price_filter == 'lt_20000' %}selected{% endif %}>Less than 20000</option>
+                        <option value="20000_40000" {% if price_filter == '20000_40000' %}selected{% endif %}>20000 - 40000</option>
+                        <option value="gt_60000" {% if price_filter == 'gt_60000' %}selected{% endif %}>More than 60000</option>
+                 </select>
+            </div>
+           
+               
+         <button type="submit" style="color:grey;font-size:20px;font-weight:bold;">Search</button><br><br> 
+       </form>
+        </div>
+        <div class="col-md-9">
+           
+            <div class="row" id="events-list">
+                {% include 'events_list.html' %}
+
+            </div>
+            {% if page_obj.has_next %}
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button id="load-more" class="btn btn-primary">More</button>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/events.js' %}"></script>
+  {%endblock%}    

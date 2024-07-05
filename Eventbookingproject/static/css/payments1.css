@@ -1,0 +1,56 @@
+.container{
+    background-color: grey;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form{
+    margin-top: 2rem;
+}
+h1{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #343a40;
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+    color:#495057;
+    font-size: 25px;
+}
+.form-control{
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+
+
+}.btn-secondary{
+    background-color: #6c757d;
+    border-color: #6c757d;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+}
+.btn-secondary:hover{
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+.btn-success{
+    margin-top: 1rem;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-success:hover{
+    background-color: #218838;
+    border-color: #1e7e34;
+
+}
+.aler{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.mb-3{
+    margin-bottom: 1rem;
+}
+
+

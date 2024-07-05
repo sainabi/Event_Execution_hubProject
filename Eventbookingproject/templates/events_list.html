@@ -1,0 +1,13 @@
+{% for i in page_obj %}
+<div class="col-md-4 mb-4">
+    <div class="event-card">
+        <a href="{% url 'event_detail' event_id=i.id %}"></a>
+        <img src="{{i.image.url}}" class="card-img-top" alt="Event Image">
+        <div class="card-body">
+            <h5 class="card-title event-title">{{i.event}}</h5>
+            <a href="{%url 'event_detail' event_id=i.id %}" class="btn btn-sm btn-outline-secondary  btn-book-now">View In Full<i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endfor %}

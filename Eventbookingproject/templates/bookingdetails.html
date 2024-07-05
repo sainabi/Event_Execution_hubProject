@@ -1,0 +1,94 @@
+
+{%extends 'navbar.html'%}
+{%load static%}
+{% block title%}Booked Details{%endblock%}
+  
+
+{%block content%}
+<style>
+    body{
+        background-color:white;
+        font-family:Arial,sans-serif;
+
+    }
+    table{
+        width:100%;
+        border-collapse:collapse;
+        border:2px solid #000;
+        margin-top:80px;
+    }
+    th,td{
+        padding:8px;
+        border:1px solid #000;
+    }
+    th{
+        background-color:#f2f2f2;
+        text-align:left;
+    }
+    tr:nth-child(even){
+        background-color:#ddd;
+    }
+    tr:hover{
+        background-color:#ddd;
+    }
+    img{
+        max-width:100px;
+        height:auto;
+        display:block;
+        margin:0 auto;
+    }
+     .action-coloumn{
+        text-align:center;
+     }
+     .action-link{
+        margin-right:5px;
+        text-decoration:none;
+        color:#333;
+     }
+     .update-link{
+        color:#007bff;
+     }
+     .delete-link{
+        color:#dc3545;
+     }
+     a{
+        font-weight:bold;
+        font-size:15px;
+     }
+
+ 
+</style>
+
+    <h1>Booked Details</h1>
+    <table border='2'>
+        <tr>
+            <th>User</th>
+            <th>Event</th>
+            <th>Image</th>
+            <th>Location Of Booking</th>
+            <th>Booking Confirmed On</th>
+            <th>Scheduled Day</th>
+            <th> Update if need:</th>
+            <th>Delete if need:</th>
+            
+              
+        </tr>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.user.username }}</td>
+            <td>{{ booking.event.event }}</td>
+            <td><img src="{{ booking.event.image.url }}" alt="{{ booking.event.event }}" width="100" height="100"></td>
+            <td>{{booking.location}}</td>
+            <td>{{booking.booking_date}}</td>
+            <td>{{ booking.booking_for_date }}</td>
+            <td><a href="{%url 'booking_update' booking.id %}">Update</a></td>
+               <td> <a href="{%url 'booking_delete' booking.id %}">Delete</a>
+            </td>
+
+          
+        </tr>
+        {% endfor %}
+    </table>
+    {%endblock%}
+</body>
+</html>

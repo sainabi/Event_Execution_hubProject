@@ -1,0 +1,125 @@
+body{
+    overflow-y: auto;
+    touch-action: none;
+    overscroll-behavior: none;
+    margin: 0;
+    padding-top: 20px;
+   
+   
+}
+
+.container.event-container{
+    margin-top:50px;
+
+}
+.event-card{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.event-card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-card .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.event-card .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-card .card-text {
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.event-card .card-text:last-child {
+    margin-bottom: 0;
+}
+
+.price-text{
+    color: blue;
+}
+
+.event-title{
+    color: blue;
+}
+
+.btn-book-now {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+.event-container {
+    max-width: 100%;
+    margin: auto; 
+    padding: 0 15px;
+}
+
+
+    .search-form{
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .search-form .form-group{
+        margin-bottom: 15px;
+    }
+    .search-form .form-control{
+        width: 100%;
+    
+        padding: 10px;
+        border:1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .search-form label{
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .search-form .btn {
+        display: block;
+        width: 100%;
+        padding: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    .search-form .btn:hover {
+        background-color: #0056b3;
+    }
+

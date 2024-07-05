@@ -1,0 +1,65 @@
+{% extends 'navbar.html' %}
+{% block title %}Delete Event{% endblock %}
+
+{% block content %}
+
+<style>
+    .event-list-container{
+        max-width:1000px;
+        width:1000px;
+        margin:0 auto;
+        margin-top:20px;
+        padding:15px;
+        background-color:#f8f9fa;
+        border-radius:8px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+        margin-top:80px;
+
+}
+.event-list-container h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+.event-list{
+    list-style-type:none;
+    padding:0;
+
+}
+.event-list li{
+    background-color:#fff;
+    margin-bottom:10px;
+    padding:15px;
+    border-radius:5px;
+    box-shadow:0 0 5px rgba(0,0,0,0.1);
+    transition:background-color:0.3s;
+}
+.event-list li a{
+    text-decoration:none;
+    color:#007bff;
+    font-weight:bold;
+}
+.event-list li:hover{
+    background-color:#f1f1f1;
+}
+.event-list li a:hover{
+    color:#0056b3;
+}
+
+
+</style>
+
+
+
+
+    <div class="event-list-container">
+    <h2>Delete Event</h2>
+    <ul class="event-list">
+        {% for event in events %}
+        <li>
+            <a href="{% url 'delete_event' event_id=event.id %}">{{ event.event }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

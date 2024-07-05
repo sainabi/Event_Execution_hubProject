@@ -1,0 +1,40 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Services</title>
+     <link rel="stylesheet" href="{% static 'css/services.css' %}">
+
+</head>
+<body>
+     <header>
+        <h1>Event Management Services</h1>
+    </header>
+
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service">
+            <h3>Event Planning</h3>
+            <p>From concept to execution, we handle every aspect of event planning to ensure a seamless experience for our clients and guests.</p>
+        </div>
+        <div class="service">
+            <h3>Venue Selection</h3>
+            <p>We help you find the perfect venue for your event, whether it's a corporate conference, wedding, or private party.</p>
+        </div>
+        <div class="service">
+            <h3>Decoration and Design</h3>
+            <p>Our talented team of designers creates stunning decorations and themes that bring your event to life.</p>
+        </div>
+        <div class="service">
+            <h3>Catering</h3>
+            <p>From hors d'oeuvres to dessert, our catering services provide delicious food and beverages for any occasion.</p>
+        </div>
+        
+    </section>
+    <div style="text-align:center;">
+        <a style="font-weight: bold;font-size:20px;color:blue;" href="{%url 'home'%}">Go to Home</a>
+    </div>
+</body>
+</html>
